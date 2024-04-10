@@ -54,6 +54,11 @@ package by.itstep.javatraining.revision.task;
 
 public class Task05 {
     public static String start(int a, int b, int n) {
-        return "error";
+        if (a <= 0 || b <= 0 || n <= 0) {
+            return "error";
+        }
+        int totalKopeks = (a * 100 + b) * n;
+
+        return totalKopeks / 100 + " " + totalKopeks % 100;
     }
 }
